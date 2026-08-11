@@ -27,6 +27,7 @@
     "react-redux": "^9.3.0",
     "recharts": "^3.10.1",
     "source-map-js": "^1.2.1",
+    "lightningcss": "1.32.0",
     "tailwind-merge": "^3.6.0",
     "zod": "^4.4.3"
   },
