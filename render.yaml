@@ -1,0 +1,15 @@
+# Render Blueprint — OpsFlow mock REST API (JSON Server)
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: opsflow-api
+    runtime: node
+    plan: free
+    rootDir: api
+    buildCommand: npm install
+    startCommand: npm run start:prod
+    healthCheckPath: /jobs?_limit=1
+    envVars:
+      - key: NODE_VERSION
+        value: "22"

@@ -1,0 +1,37 @@
+{
+  "name": "opsflow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpsFlow — Service Operations Command Center (POC)",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "api"
+  ],
+  "scripts": {
+    "web": "npm run dev -w @opsflow/web",
+    "web:build": "npm run build -w @opsflow/web",
+    "web:lint": "npm run lint -w @opsflow/web",
+    "web:typecheck": "npm run typecheck -w @opsflow/web",
+    "web:test": "npm run test -w @opsflow/web",
+    "web:test:e2e": "npm run test:e2e -w @opsflow/web",
+    "mobile": "npm run start -w @opsflow/mobile",
+    "mobile:android": "npm run android -w @opsflow/mobile",
+    "mobile:lint": "npm run lint -w @opsflow/mobile",
+    "mobile:typecheck": "npm run typecheck -w @opsflow/mobile",
+    "mobile:test": "npm test -w @opsflow/mobile",
+    "shared:typecheck": "npm run typecheck -w @opsflow/shared",
+    "api": "npm run start -w @opsflow/api",
+    "api:seed": "npm run seed -w @opsflow/api",
+    "lint": "npm run web:lint && npm run mobile:lint",
+    "format": "npm run format -w @opsflow/web",
+    "format:check": "npm run format:check -w @opsflow/web",
+    "typecheck": "npm run shared:typecheck && npm run web:typecheck && npm run mobile:typecheck",
+    "test": "npm run web:test && npm run mobile:test",
+    "build": "npm run web:build",
+    "ci": "npm run lint && npm run format:check && npm run typecheck && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

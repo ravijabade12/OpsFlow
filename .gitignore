@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Builds
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Local agent skill installs (TasteSkill is documented; keep installable via npx)
+# Keep .agents/skills in repo for team consistency
+.cursor/
+
+# Logs & caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.turbo/
+.cache/
+coverage/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# React Native / Android / iOS (when scaffolded)
+apps/mobile/android/app/build/
+apps/mobile/android/.gradle/
+apps/mobile/ios/build/
+apps/mobile/ios/Pods/
+*.jks
+*.keystore
+
+# Generated large seed data (keep seed scripts; ignore huge artifacts if split later)
+# api/db.json may be committed for the POC; uncomment if it becomes too large for git:
+# api/db.json
+
+# Misc
+*.log
+.tmp/
+.temp/
+
+# Test / Playwright artifacts
+**/coverage/
+**/test-results/
+**/playwright-report/
+**/blob-report/
+apps/web/test-results/
+apps/web/playwright-report/

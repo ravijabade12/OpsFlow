@@ -1,0 +1,15 @@
+{
+  "name": "@opsflow/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpsFlow mock REST API (JSON Server + seeded db.json)",
+  "scripts": {
+    "seed": "node seed/generate.mjs",
+    "start": "json-server --watch db.json --port 3001 --host 0.0.0.0",
+    "start:prod": "node ./server.mjs",
+    "dev": "npm run start"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
