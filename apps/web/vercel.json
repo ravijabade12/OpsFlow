@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "installCommand": "cd ../.. && npm ci && npm install --no-save --workspace=@opsflow/web lightningcss-linux-x64-gnu@1.32.0 lightningcss-linux-x64-musl@1.32.0 && mkdir -p apps/web/node_modules && ( [ -d node_modules/lightningcss-linux-x64-gnu ] && cp -a node_modules/lightningcss-linux-x64-gnu apps/web/node_modules/ || true ) && ( [ -d node_modules/lightningcss-linux-x64-musl ] && cp -a node_modules/lightningcss-linux-x64-musl apps/web/node_modules/ || true )",
+  "installCommand": "cd ../.. && bash apps/web/scripts/vercel-install.sh",
   "buildCommand": "cd ../.. && npm run web:build"
 }

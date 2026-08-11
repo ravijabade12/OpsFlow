@@ -96,7 +96,7 @@ Fill in after deploy (also mirrored in `docs/PRESENTATION.md`):
 | Symptom | Fix |
 |---------|-----|
 | Vercel build cannot resolve `@opsflow/shared` | Root Directory = `apps/web` + include files outside root; install from monorepo root |
-| Vercel `lightningcss.linux-x64-gnu.node` missing | Already handled in `apps/web/vercel.json` installCommand (copies Linux native pkgs into `apps/web/node_modules`). Redeploy **latest `main`**, not an old commit. Clear build cache. |
+| Vercel `lightningcss.linux-x64-gnu.node` missing | Handled by `apps/web/scripts/vercel-install.sh` (wired from `vercel.json`). Redeploy latest `main` with cache cleared. |
 | Jobs page empty / CORS errors | Confirm `NEXT_PUBLIC_API_BASE_URL` matches the Render origin; JSON Server allows CORS by default |
 | Render 502 on first hit | Wait for cold start; hit `/jobs?_limit=1` again |
 | CI fails on `npm ci` | Commit root `package-lock.json` |
