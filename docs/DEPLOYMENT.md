@@ -14,20 +14,17 @@
 
 ## 1. GitHub repository
 
-```bash
-# From repo root (if not already a git repo)
-git init
-git add .
-git commit -m "chore: OpsFlow POC through Phase 12"
+Git is initialized on `main` (local root commit). Create the remote and push:
 
-# Create + push (requires GitHub CLI or remote URL)
+```bash
+# Requires GitHub CLI or a remote URL you control
 gh repo create OpsFlow --private --source=. --remote=origin --push
 # or:
 # git remote add origin https://github.com/<you>/OpsFlow.git
 # git push -u origin main
 ```
 
-Ensure `package-lock.json` is committed — CI uses `npm ci`.
+Ensure `package-lock.json` remains committed — CI uses `npm ci`.
 
 ---
 
