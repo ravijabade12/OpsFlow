@@ -66,11 +66,11 @@ export function Sidebar() {
     <>
       <aside
         className={cn(
-          "bg-sidebar text-sidebar-foreground hidden h-full shrink-0 flex-col border-r border-slate-800 lg:flex",
+          "bg-sidebar text-sidebar-foreground sticky top-0 hidden h-dvh shrink-0 flex-col border-r border-slate-800 lg:flex",
           sidebarOpen ? "w-60" : "w-[4.5rem]",
         )}
       >
-        <div className="flex h-14 items-center border-b border-slate-800 px-4">
+        <div className="flex h-14 shrink-0 items-center border-b border-slate-800 px-4">
           <Link href="/dashboard" className="flex items-center gap-2">
             <span className="bg-accent text-accent-foreground inline-flex h-8 w-8 items-center justify-center rounded-md text-xs font-bold">
               OF
@@ -82,8 +82,8 @@ export function Sidebar() {
             ) : null}
           </Link>
         </div>
-        {nav}
-        <div className="text-sidebar-muted border-t border-slate-800 px-4 py-3 text-xs">
+        <div className="min-h-0 flex-1 overflow-y-auto">{nav}</div>
+        <div className="text-sidebar-muted shrink-0 border-t border-slate-800 px-4 py-3 text-xs">
           {sidebarOpen ? "Service operations POC" : "POC"}
         </div>
       </aside>

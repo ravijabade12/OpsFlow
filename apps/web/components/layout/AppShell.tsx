@@ -15,9 +15,9 @@ export function AppShell({
   actions?: ReactNode;
 }) {
   return (
-    <div className="bg-background flex min-h-[100dvh]">
+    <div className="bg-background flex min-h-dvh items-stretch">
       <Sidebar />
-      <div className="flex min-w-0 flex-1 flex-col">
+      <div className="flex min-h-dvh min-w-0 flex-1 flex-col">
         <Header title={title} description={description} />
         {actions ? (
           <div className="border-border bg-surface flex flex-wrap items-center gap-2 border-b px-4 py-3 md:px-6">
