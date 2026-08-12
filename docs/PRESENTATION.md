@@ -10,12 +10,10 @@
 
 | Asset | URL | Status |
 |-------|-----|--------|
-| GitHub repository | _add after push_ | Pending host account |
-| Web (Vercel) | _add after deploy_ | Config ready — see [DEPLOYMENT.md](./DEPLOYMENT.md) |
-| Public API (Render) | _add after deploy_ | Blueprint ready — `render.yaml` |
+| GitHub repository | [https://github.com/ravijabade12/OpsFlow](https://github.com/ravijabade12/OpsFlow) | Live |
+| Web (Vercel) | [https://ops-flow-web-eight.vercel.app/dashboard](https://ops-flow-web-eight.vercel.app/dashboard) | Live |
+| Public API (Render) | [https://opsflow-api-p8l4.onrender.com](https://opsflow-api-p8l4.onrender.com) | Live |
 | Mobile | Local demo / screenshots | No store publish |
-
-Update this table once Vercel + Render URLs exist.
 
 ---
 
